@@ -1,0 +1,10 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+  Спасибо за покупку
+{% endblock title %}
+
+{% block content %}
+    <h1>Спасибо за покупку</h1>
+    <p>Ваш заказ успешно завершен. Номер вашего заказа: <strong>{{ order.id }}</strong></p>
+{% endblock content %}

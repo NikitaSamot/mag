@@ -1,6 +1,7 @@
 {% extends 'shop/base.html' %}
 {% load i18n %}
 {% load static %}
+{% load embed_video_tags %}
 {% block title %}
     {{ product.name }}
 {% endblock title %}
@@ -16,12 +17,16 @@
         </h2>
         <p class="price">
             ${{ product.price }}</p>
+        {% video video 'small' %}
+        <span class="count">
+            {{ total_views }}{% trans 'Просмотров' %}{{ total_views|pluralize }}
+        </span>
         <form action="{% url 'cart:cart_add' product.id %}" method="post">
             {{ cart_product_form }}
             {% csrf_token %}
             <input type="submit" value="{% trans 'Add to cart' %}">
         </form>
-            {{ product.description|linebreaks }}
+            <span class="desc">{{ product.description|linebreaks }}</span>
         {% if recommended_products %}
         <div class="recommendations">
             <h3>{% trans 'People who bought this also bought' %}</h3>
@@ -36,6 +41,22 @@
             {% endfor %}
         </div>
         {% endif %}
+        {% with comments.count as total_comments %}
+        <h2>
+            {{ total_comments }} {% trans 'comment' %}{{ total_comments|pluralize }}
+        </h2>
+        {% endwith %}
+        {% for comment in comments %}
+        <div class="comment">
+            <p class="info">
+                {% trans 'Comment' %} {{ forloop.counter }} {% trans 'by' %} {{ comment.name }}
+                {{ comment.created }}
+            </p>
+            {{ comment.body|linebreaks }}
+        </div>
+        {% empty %}
+        <p>{% trans 'There are no comments.' %}</p>
+        {% endfor %}
+        {% include 'shop/product/includes/comment_form.html' %}
     </div>
-
 {% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'shop/base.html' %}
+{% load i18n %}
+{% block title %}
+{% trans 'Add Comment' %}
+{% endblock title %}
+
+{% block content %}
+{% if comment %}
+<h2>{% trans 'Your comment has been added.' %}</h2>
+<p><a href="{{ product.get_absolute_url }}">{% trans 'Back to the Product' %}</a></p>
+{% else %}
+{% include 'shop/product/includes/comment_form.html' %}
+{% endif %}
+{% endblock content %}

@@ -29,6 +29,7 @@
     </div>
     <div id="subheader">
         <div class="cart">
+            <a href="{% url 'shop:product_search' %}">Поиск</a><br>
             {% with total_items=cart|length %}
             {% if total_items > 0 %}
             {% trans "Your cart" %}:

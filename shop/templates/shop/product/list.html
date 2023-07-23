@@ -14,6 +14,9 @@
     <div id="sidebar">
         <h3>{%  trans 'Categories'%}</h3>
         <ul>
+            <li>
+                <a href="{% url 'shop:ranking' %}">{% trans 'Most viewed' %}</a>
+            </li>
             <li {% if not category %}class='selected'{% endif %}>
                 <a href="{% url 'shop:product_list' %}">{% trans 'All' %}</a>
             </li>
@@ -36,6 +39,8 @@
             <br>
             ${{ product.price }}
         </div>
+        {% empty %}
+        <p>{% trans 'There are no products.' %}</p>
         {% endfor %}
     </div>
 {% endblock content %}

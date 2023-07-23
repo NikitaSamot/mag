@@ -18,7 +18,7 @@ def stripe_webhook(request):
     except ValueError as e:
         # Недопустимая полезная нагрузка
         return HttpResponse(status=400)
-    except stripe.errors.SignatureVerificationError as e:
+    except stripe.error.SignatureVerificationError as e:
         # Неверная подпись
         return HttpResponse(status=400)
     if event.type == 'checkout.session.completed':

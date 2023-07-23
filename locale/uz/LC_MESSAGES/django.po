@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-20 04:17+0500\n"
+"POT-Creation-Date: 2023-07-23 23:01+0500\n"
 "PO-Revision-Date: 2023-07-20 01:13+0500\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,12 +62,12 @@ msgstr ""
 
 #: .\cart\templates\cart\detail.html:67
 #: .\payment\templates\payment\process.html:17
-#: .\payment\templates\payment\process.html:52
+#: .\payment\templates\payment\process.html:53
 msgid "Total"
 msgstr "Jami"
 
 #: .\cart\templates\cart\detail.html:75
-#: .\shop\templates\shop\product\detail.html:27
+#: .\shop\templates\shop\product\detail.html:32
 msgid "People who bought this also bought"
 msgstr "Buni sotib olgan odamlar ham sotib olishdi"
 
@@ -79,11 +79,11 @@ msgstr "Kuponni qo'llash"
 msgid "Apply"
 msgstr "Murojaat qiling"
 
-#: .\cart\templates\cart\detail.html:96
+#: .\cart\templates\cart\detail.html:95
 msgid "Continue shopping"
 msgstr "Xarid qilishda davom eting"
 
-#: .\cart\templates\cart\detail.html:97
+#: .\cart\templates\cart\detail.html:96
 msgid "Checkout"
 msgstr "Ro'yxatdan o'chirilish"
 
@@ -91,15 +91,15 @@ msgstr "Ro'yxatdan o'chirilish"
 msgid "Coupon"
 msgstr "Kupon"
 
-#: .\myshop\settings.py:118
+#: .\myshop\settings.py:129
 msgid "Russian"
 msgstr "Русский"
 
-#: .\myshop\settings.py:119
+#: .\myshop\settings.py:130
 msgid "English"
 msgstr "Английский"
 
-#: .\myshop\settings.py:120
+#: .\myshop\settings.py:131
 msgid "Uzbek"
 msgstr "Ўзбекча"
 
@@ -147,18 +147,18 @@ msgstr "Toʻlovingiz muvaffaqiyatli amalga oshirildi."
 msgid "Pay your order"
 msgstr "Buyurtmani to'lang"
 
-#: .\payment\templates\payment\process.html:34
+#: .\payment\templates\payment\process.html:35
 msgid "Subtotal"
 msgstr "Oraliq jami"
 
-#: .\payment\templates\payment\process.html:42
+#: .\payment\templates\payment\process.html:43
 #, python-format
 msgid ""
 "%(code)s (%(discount)s%% off) %%}\n"
 "            "
 msgstr ""
 
-#: .\payment\templates\payment\process.html:57
+#: .\payment\templates\payment\process.html:58
 msgid "Pay now"
 msgstr "Hozir to'lang"
 
@@ -182,11 +182,11 @@ msgstr ""
 msgid "Language"
 msgstr ""
 
-#: .\shop\templates\shop\base.html:34
+#: .\shop\templates\shop\base.html:35
 msgid "Your cart"
 msgstr "Sizning savatingiz"
 
-#: .\shop\templates\shop\base.html:36
+#: .\shop\templates\shop\base.html:37
 #, python-format
 msgid ""
 "\n"
@@ -198,16 +198,54 @@ msgid_plural ""
 "                "
 msgstr[0] ""
 
-#: .\shop\templates\shop\base.html:43
+#: .\shop\templates\shop\base.html:44
 msgid "Your cart is empty"
 msgstr "Savatingiz boʻsh"
 
+#: .\shop\templates\shop\product\comment.html:4
+msgid "Add Comment"
+msgstr ""
+
+#: .\shop\templates\shop\product\comment.html:9
+#, fuzzy
+#| msgid "Your payment has not been processed"
+msgid "Your comment has been added."
+msgstr "Toʻlovingiz amalga oshirilmadi"
+
+#: .\shop\templates\shop\product\comment.html:10
+msgid "Back to the Product"
+msgstr ""
+
 #: .\shop\templates\shop\product\detail.html:22
+msgid "Просмотров"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:27
 msgid "Add to cart"
 msgstr "Savatchaga qo'shish"
 
+#: .\shop\templates\shop\product\detail.html:46
+msgid "comment"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:52
+msgid "Comment"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:52
+msgid "by"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:58
+msgid "There are no comments."
+msgstr ""
+
+#: .\shop\templates\shop\product\includes\comment_form.html:6
+msgid "Submit"
+msgstr ""
+
 #: .\shop\templates\shop\product\list.html:8
-#: .\shop\templates\shop\product\list.html:28
+#: .\shop\templates\shop\product\list.html:31
 msgid "Products"
 msgstr "Mahsulotlar"
 
@@ -216,8 +254,52 @@ msgid "Categories"
 msgstr "Kategoriyalar"
 
 #: .\shop\templates\shop\product\list.html:18
+msgid "Most viewed"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:21
 msgid "All"
 msgstr "Hammasi"
+
+#: .\shop\templates\shop\product\list.html:43
+msgid "There are no products."
+msgstr ""
+
+#: .\shop\templates\shop\product\ranking.html:5
+#: .\shop\templates\shop\product\ranking.html:9
+#, fuzzy
+#| msgid "Products"
+msgid "Products rating"
+msgstr "Mahsulotlar"
+
+#: .\shop\templates\shop\product\search.html:5
+#: .\shop\templates\shop\product\search.html:31
+msgid "Search"
+msgstr ""
+
+#: .\shop\templates\shop\product\search.html:10
+msgid "Products containing "
+msgstr ""
+
+#: .\shop\templates\shop\product\search.html:13
+msgid "Found"
+msgstr ""
+
+#: .\shop\templates\shop\product\search.html:13
+msgid "result"
+msgstr ""
+
+#: .\shop\templates\shop\product\search.html:24
+msgid "There are no results for your query."
+msgstr ""
+
+#: .\shop\templates\shop\product\search.html:26
+msgid "Search again"
+msgstr ""
+
+#: .\shop\templates\shop\product\search.html:28
+msgid "Search for product"
+msgstr ""
 
 #: .\venv\Lib\site-packages\click\_termui_impl.py:518
 #, python-brace-format
@@ -1719,6 +1801,18 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:248
 msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: .\venv\Lib\site-packages\embed_video\fields.py:44
+msgid "URL could not be recognized."
+msgstr ""
+
+#: .\venv\Lib\site-packages\embed_video\fields.py:47
+msgid "ID of this video could not be recognized."
+msgstr ""
+
+#: .\venv\Lib\site-packages\embed_video\fields.py:50
+msgid "This media not found on site."
 msgstr ""
 
 #: .\venv\Lib\site-packages\kombu\transport\qpid.py:1311
